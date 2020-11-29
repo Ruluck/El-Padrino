@@ -15,7 +15,6 @@ import {view} from './store.js'
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 </svelte:head>
 
-<main>
 	{#if $view == 'Main'}
 		<Main/>
 	{/if}
@@ -24,12 +23,7 @@ import {view} from './store.js'
 		<Login/>
 	{/if}
 
-</main>
 
 <style>
-	main  {
-		display: flex;
-		justify-content: center;
-		padding-top: 10em;
-	}
+
 </style>

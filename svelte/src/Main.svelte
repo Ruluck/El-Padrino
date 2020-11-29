@@ -13,7 +13,7 @@ import {view} from './store.js'
 
 <div class="Content">
     <div class="El_Padrino_Logo">
-        <img class = "Logo" src="/img/EL-PADRINO.png" alt="">
+        <img class = "Logo" src="/img/EL-PADRINO-solo-LOGO-blanco.png" alt="">
     </div>
 
         <div class="Buttons">
@@ -35,6 +35,7 @@ import {view} from './store.js'
         display: flex;
         align-items: center;
         flex-direction: column;
+        margin-top: 45px;
     }
 
     .Content {
@@ -42,6 +43,7 @@ import {view} from './store.js'
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        padding-top: 10em;
     }
 
     button {
@@ -57,9 +59,9 @@ import {view} from './store.js'
         border-radius: 25px;
     }
 
-button:hover {
-    background-color: #ea911c;
-    color: #f5f5f5;
-}
+    button:hover {
+        background-color: #ea911c;
+        color: #f5f5f5;
+    }
 
 </style>
