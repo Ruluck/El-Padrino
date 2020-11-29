@@ -65,6 +65,9 @@ var app = (function () {
     function space() {
         return text(' ');
     }
+    function empty() {
+        return text('');
+    }
     function listen(node, event, handler, options) {
         node.addEventListener(event, handler, options);
         return () => node.removeEventListener(event, handler, options);
@@ -428,59 +431,70 @@ var app = (function () {
     const file = "src/Login.svelte";
 
     function create_fragment(ctx) {
-    	let t0;
-    	let div;
+    	let div0;
     	let button0;
     	let i;
-    	let t1;
+    	let t0;
+    	let div2;
+    	let div1;
     	let input0;
-    	let t2;
+    	let t1;
     	let input1;
-    	let t3;
+    	let t2;
     	let button1;
     	let mounted;
     	let dispose;
 
     	const block = {
     		c: function create() {
-    			t0 = space();
-    			div = element("div");
+    			div0 = element("div");
     			button0 = element("button");
     			i = element("i");
-    			t1 = space();
+    			t0 = space();
+    			div2 = element("div");
+    			div1 = element("div");
     			input0 = element("input");
-    			t2 = space();
+    			t1 = space();
     			input1 = element("input");
-    			t3 = space();
+    			t2 = space();
     			button1 = element("button");
     			button1.textContent = "Enter";
     			attr_dev(i, "class", "fas fa-caret-left");
-    			add_location(i, file, 13, 32, 186);
-    			add_location(button0, file, 13, 4, 158);
-    			attr_dev(div, "class", "Back");
-    			add_location(div, file, 12, 0, 135);
+    			add_location(i, file, 13, 44, 212);
+    			attr_dev(button0, "class", "bck svelte-1yrgawz");
+    			add_location(button0, file, 13, 4, 172);
+    			attr_dev(div0, "class", "Back svelte-1yrgawz");
+    			add_location(div0, file, 12, 0, 149);
     			attr_dev(input0, "type", "email");
     			attr_dev(input0, "placeholder", "Email");
-    			add_location(input0, file, 17, 0, 238);
+    			attr_dev(input0, "class", "svelte-1yrgawz");
+    			add_location(input0, file, 18, 16, 344);
     			attr_dev(input1, "type", "password");
     			attr_dev(input1, "placeholder", "Password");
-    			add_location(input1, file, 18, 0, 279);
-    			add_location(button1, file, 20, 0, 327);
+    			attr_dev(input1, "class", "svelte-1yrgawz");
+    			add_location(input1, file, 19, 16, 401);
+    			attr_dev(div1, "class", "inputs svelte-1yrgawz");
+    			add_location(div1, file, 17, 12, 307);
+    			attr_dev(button1, "class", "entrar svelte-1yrgawz");
+    			add_location(button1, file, 22, 16, 484);
+    			attr_dev(div2, "class", "login-content svelte-1yrgawz");
+    			add_location(div2, file, 16, 4, 267);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, t0, anchor);
-    			insert_dev(target, div, anchor);
-    			append_dev(div, button0);
+    			insert_dev(target, div0, anchor);
+    			append_dev(div0, button0);
     			append_dev(button0, i);
-    			insert_dev(target, t1, anchor);
-    			insert_dev(target, input0, anchor);
-    			insert_dev(target, t2, anchor);
-    			insert_dev(target, input1, anchor);
-    			insert_dev(target, t3, anchor);
-    			insert_dev(target, button1, anchor);
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, div2, anchor);
+    			append_dev(div2, div1);
+    			append_dev(div1, input0);
+    			append_dev(div1, t1);
+    			append_dev(div1, input1);
+    			append_dev(div2, t2);
+    			append_dev(div2, button1);
 
     			if (!mounted) {
     				dispose = listen_dev(button0, "click", /*goToMain*/ ctx[0], false, false, false);
@@ -491,14 +505,9 @@ var app = (function () {
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div0);
     			if (detaching) detach_dev(t0);
-    			if (detaching) detach_dev(div);
-    			if (detaching) detach_dev(t1);
-    			if (detaching) detach_dev(input0);
-    			if (detaching) detach_dev(t2);
-    			if (detaching) detach_dev(input1);
-    			if (detaching) detach_dev(t3);
-    			if (detaching) detach_dev(button1);
+    			if (detaching) detach_dev(div2);
     			mounted = false;
     			dispose();
     		}
@@ -554,71 +563,56 @@ var app = (function () {
     const file$1 = "src/Main.svelte";
 
     function create_fragment$1(ctx) {
-    	let link0;
-    	let link1;
-    	let t0;
     	let div2;
     	let div0;
     	let img;
     	let img_src_value;
-    	let t1;
+    	let t0;
     	let div1;
     	let button0;
-    	let t3;
+    	let t2;
     	let button1;
     	let mounted;
     	let dispose;
 
     	const block = {
     		c: function create() {
-    			link0 = element("link");
-    			link1 = element("link");
-    			t0 = space();
     			div2 = element("div");
     			div0 = element("div");
     			img = element("img");
-    			t1 = space();
+    			t0 = space();
     			div1 = element("div");
     			button0 = element("button");
     			button0.textContent = "LOGIN";
-    			t3 = space();
+    			t2 = space();
     			button1 = element("button");
     			button1.textContent = "SIGN UP";
-    			attr_dev(link0, "rel", "preconnect");
-    			attr_dev(link0, "href", "https://fonts.gstatic.com");
-    			add_location(link0, file$1, 12, 4, 135);
-    			attr_dev(link1, "href", "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
-    			attr_dev(link1, "rel", "stylesheet");
-    			add_location(link1, file$1, 13, 0, 192);
-    			attr_dev(img, "class", "Logo svelte-m9juxi");
-    			if (img.src !== (img_src_value = "/img/EL-PADRINO.png")) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "class", "Logo svelte-1rf8qfb");
+    			if (img.src !== (img_src_value = "/img/EL-PADRINO-solo-LOGO-blanco.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
-    			add_location(img, file$1, 19, 8, 382);
+    			add_location(img, file$1, 15, 8, 223);
     			attr_dev(div0, "class", "El_Padrino_Logo");
-    			add_location(div0, file$1, 18, 4, 344);
-    			attr_dev(button0, "class", "svelte-m9juxi");
-    			add_location(button0, file$1, 23, 8, 482);
-    			attr_dev(button1, "class", "svelte-m9juxi");
-    			add_location(button1, file$1, 24, 8, 534);
-    			attr_dev(div1, "class", "Buttons svelte-m9juxi");
-    			add_location(div1, file$1, 22, 4, 452);
-    			attr_dev(div2, "class", "Content svelte-m9juxi");
-    			add_location(div2, file$1, 17, 0, 318);
+    			add_location(div0, file$1, 14, 4, 185);
+    			attr_dev(button0, "class", "svelte-1rf8qfb");
+    			add_location(button0, file$1, 19, 12, 348);
+    			attr_dev(button1, "class", "svelte-1rf8qfb");
+    			add_location(button1, file$1, 20, 12, 404);
+    			attr_dev(div1, "class", "Buttons svelte-1rf8qfb");
+    			add_location(div1, file$1, 18, 8, 314);
+    			attr_dev(div2, "class", "Content svelte-1rf8qfb");
+    			add_location(div2, file$1, 13, 0, 159);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			append_dev(document.head, link0);
-    			append_dev(document.head, link1);
-    			insert_dev(target, t0, anchor);
     			insert_dev(target, div2, anchor);
     			append_dev(div2, div0);
     			append_dev(div0, img);
-    			append_dev(div2, t1);
+    			append_dev(div2, t0);
     			append_dev(div2, div1);
     			append_dev(div1, button0);
-    			append_dev(div1, t3);
+    			append_dev(div1, t2);
     			append_dev(div1, button1);
 
     			if (!mounted) {
@@ -630,9 +624,6 @@ var app = (function () {
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			detach_dev(link0);
-    			detach_dev(link1);
-    			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(div2);
     			mounted = false;
     			dispose();
@@ -688,7 +679,7 @@ var app = (function () {
     /* src/App.svelte generated by Svelte v3.30.0 */
     const file$2 = "src/App.svelte";
 
-    // (11:1) {#if $view == 'Main'}
+    // (18:1) {#if $view == 'Main'}
     function create_if_block_1(ctx) {
     	let main;
     	let current;
@@ -720,14 +711,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(11:1) {#if $view == 'Main'}",
+    		source: "(18:1) {#if $view == 'Main'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (15:1) {#if $view == 'Login'}
+    // (22:1) {#if $view == 'Login'}
     function create_if_block(ctx) {
     	let login;
     	let current;
@@ -759,7 +750,7 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(15:1) {#if $view == 'Login'}",
+    		source: "(22:1) {#if $view == 'Login'}",
     		ctx
     	});
 
@@ -767,29 +758,50 @@ var app = (function () {
     }
 
     function create_fragment$2(ctx) {
-    	let main;
-    	let t;
+    	let link0;
+    	let link1;
+    	let link2;
+    	let t0;
+    	let t1;
+    	let if_block1_anchor;
     	let current;
     	let if_block0 = /*$view*/ ctx[0] == "Main" && create_if_block_1(ctx);
     	let if_block1 = /*$view*/ ctx[0] == "Login" && create_if_block(ctx);
 
     	const block = {
     		c: function create() {
-    			main = element("main");
+    			link0 = element("link");
+    			link1 = element("link");
+    			link2 = element("link");
+    			t0 = space();
     			if (if_block0) if_block0.c();
-    			t = space();
+    			t1 = space();
     			if (if_block1) if_block1.c();
-    			attr_dev(main, "class", "svelte-187fynj");
-    			add_location(main, file$2, 9, 0, 124);
+    			if_block1_anchor = empty();
+    			attr_dev(link0, "rel", "preconnect");
+    			attr_dev(link0, "href", "https://fonts.gstatic.com");
+    			add_location(link0, file$2, 10, 4, 155);
+    			attr_dev(link1, "href", "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+    			attr_dev(link1, "rel", "stylesheet");
+    			add_location(link1, file$2, 11, 1, 213);
+    			attr_dev(link2, "rel", "stylesheet");
+    			attr_dev(link2, "href", "https://use.fontawesome.com/releases/v5.14.0/css/all.css");
+    			attr_dev(link2, "integrity", "sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc");
+    			attr_dev(link2, "crossorigin", "anonymous");
+    			add_location(link2, file$2, 14, 1, 346);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, main, anchor);
-    			if (if_block0) if_block0.m(main, null);
-    			append_dev(main, t);
-    			if (if_block1) if_block1.m(main, null);
+    			append_dev(document.head, link0);
+    			append_dev(document.head, link1);
+    			append_dev(document.head, link2);
+    			insert_dev(target, t0, anchor);
+    			if (if_block0) if_block0.m(target, anchor);
+    			insert_dev(target, t1, anchor);
+    			if (if_block1) if_block1.m(target, anchor);
+    			insert_dev(target, if_block1_anchor, anchor);
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
@@ -802,7 +814,7 @@ var app = (function () {
     					if_block0 = create_if_block_1(ctx);
     					if_block0.c();
     					transition_in(if_block0, 1);
-    					if_block0.m(main, t);
+    					if_block0.m(t1.parentNode, t1);
     				}
     			} else if (if_block0) {
     				group_outros();
@@ -823,7 +835,7 @@ var app = (function () {
     					if_block1 = create_if_block(ctx);
     					if_block1.c();
     					transition_in(if_block1, 1);
-    					if_block1.m(main, null);
+    					if_block1.m(if_block1_anchor.parentNode, if_block1_anchor);
     				}
     			} else if (if_block1) {
     				group_outros();
@@ -847,9 +859,14 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(main);
-    			if (if_block0) if_block0.d();
-    			if (if_block1) if_block1.d();
+    			detach_dev(link0);
+    			detach_dev(link1);
+    			detach_dev(link2);
+    			if (detaching) detach_dev(t0);
+    			if (if_block0) if_block0.d(detaching);
+    			if (detaching) detach_dev(t1);
+    			if (if_block1) if_block1.d(detaching);
+    			if (detaching) detach_dev(if_block1_anchor);
     		}
     	};
 

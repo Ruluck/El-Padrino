@@ -1,6 +1,7 @@
 <script>
-    import {view} from './store.js'
+import {view} from './store.js'
 
+//Funcion para volver ir al componente Login
     function goToLogin() {
         $view = 'Login'
     }
@@ -9,24 +10,16 @@
 
 </script>
 
-<svelte:head>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> 
-</svelte:head>
-
 
 <div class="Content">
     <div class="El_Padrino_Logo">
-        <img class = "Logo" src="/img/EL-PADRINO.png" alt="">
+        <img class = "Logo" src="/img/EL-PADRINO-solo-LOGO-blanco.png" alt="">
     </div>
 
-    <div class="Buttons">
-        <button on:click={goToLogin}>LOGIN</button>
-        <button>SIGN UP</button>
-    </div>
-
-    
-
+        <div class="Buttons">
+            <button on:click={goToLogin}>LOGIN</button>
+            <button>SIGN UP</button>
+        </div>
 </div>
 
 
@@ -42,6 +35,7 @@
         display: flex;
         align-items: center;
         flex-direction: column;
+        margin-top: 45px;
     }
 
     .Content {
@@ -49,6 +43,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        padding-top: 10em;
     }
 
     button {
@@ -64,9 +59,9 @@
         border-radius: 25px;
     }
 
-button:hover {
-    background-color: #ea911c;
-    color: #f5f5f5;
-}
+    button:hover {
+        background-color: #ea911c;
+        color: #f5f5f5;
+    }
 
 </style>
