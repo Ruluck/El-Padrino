@@ -5,7 +5,11 @@ import {view} from './store.js'
     function goToLogin() {
         $view = 'Login'
     }
-
+    
+    
+    function goToSignUp() {
+        $view = 'SignUp'
+    }
 
 
 </script>
@@ -18,7 +22,7 @@ import {view} from './store.js'
 
         <div class="Buttons">
             <button on:click={goToLogin}>LOGIN</button>
-            <button>SIGN UP</button>
+            <button on:click={goToSignUp}>SIGN UP</button>
         </div>
 </div>
 

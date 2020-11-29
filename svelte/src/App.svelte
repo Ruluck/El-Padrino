@@ -1,6 +1,10 @@
 <script>
 import Login from './Login.svelte';
 import Main from './Main.svelte'
+import SignUp from './SignUp.svelte'
+import Content from './Content.svelte'
+
+
 import {view} from './store.js'
 
 </script>
@@ -23,6 +27,13 @@ import {view} from './store.js'
 		<Login/>
 	{/if}
 
+	{#if $view == 'SignUp'}
+		<SignUp/>
+	{/if}
+
+	{#if $view == 'Content'}
+		<Content/>
+	{/if}
 
 <style>
 
