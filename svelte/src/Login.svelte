@@ -7,6 +7,10 @@ import {view} from './store.js'
             $view = 'Main'
         }
 
+    function goToContent() {
+        $view = 'Content'
+    }
+
 </script>
 
 
@@ -20,7 +24,7 @@ import {view} from './store.js'
                 <input type="password" placeholder="Password">
             </div>
 
-                <button class="entrar">Enter</button>
+                <button class="entrar" on:click={goToContent}>Enter</button>
     </div>
 
 

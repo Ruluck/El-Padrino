@@ -35,8 +35,8 @@ import { Swipe, SwipeItem } from "svelte-swipe";
 
     <style>
      .offers-component { 
-         background-color: #1f9f8d; 
-         padding: 4.7em; 
+         background-color: #fca94c; 
+         padding: 10.7em;
          margin: 0 auto; 
          font-family: 'Poppins'; 
          color: #f5f5f5; 
@@ -46,9 +46,9 @@ import { Swipe, SwipeItem } from "svelte-swipe";
          display: flex;
     } 
     .swipe-holder{ 
-        height: 24vh; 
+        height: 40vh; 
         width: 100%; 
-        margin-top: -84px;
+        margin-top: -335px;
         box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.4);
     }
 

@@ -568,25 +568,25 @@ var app = (function () {
     			button1 = element("button");
     			button1.textContent = "Enter";
     			attr_dev(i, "class", "fas fa-caret-left");
-    			add_location(i, file, 13, 44, 212);
+    			add_location(i, file, 17, 44, 274);
     			attr_dev(button0, "class", "bck svelte-1yrgawz");
-    			add_location(button0, file, 13, 4, 172);
+    			add_location(button0, file, 17, 4, 234);
     			attr_dev(div0, "class", "Back svelte-1yrgawz");
-    			add_location(div0, file, 12, 0, 149);
+    			add_location(div0, file, 16, 0, 211);
     			attr_dev(input0, "type", "email");
     			attr_dev(input0, "placeholder", "Email");
     			attr_dev(input0, "class", "svelte-1yrgawz");
-    			add_location(input0, file, 18, 16, 344);
+    			add_location(input0, file, 22, 16, 406);
     			attr_dev(input1, "type", "password");
     			attr_dev(input1, "placeholder", "Password");
     			attr_dev(input1, "class", "svelte-1yrgawz");
-    			add_location(input1, file, 19, 16, 401);
+    			add_location(input1, file, 23, 16, 463);
     			attr_dev(div1, "class", "inputs svelte-1yrgawz");
-    			add_location(div1, file, 17, 12, 307);
+    			add_location(div1, file, 21, 12, 369);
     			attr_dev(button1, "class", "entrar svelte-1yrgawz");
-    			add_location(button1, file, 22, 16, 484);
+    			add_location(button1, file, 26, 16, 546);
     			attr_dev(div2, "class", "login-content svelte-1yrgawz");
-    			add_location(div2, file, 16, 4, 267);
+    			add_location(div2, file, 20, 4, 329);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -605,7 +605,11 @@ var app = (function () {
     			append_dev(div2, button1);
 
     			if (!mounted) {
-    				dispose = listen_dev(button0, "click", /*goToMain*/ ctx[0], false, false, false);
+    				dispose = [
+    					listen_dev(button0, "click", /*goToMain*/ ctx[0], false, false, false),
+    					listen_dev(button1, "click", /*goToContent*/ ctx[1], false, false, false)
+    				];
+
     				mounted = true;
     			}
     		},
@@ -617,7 +621,7 @@ var app = (function () {
     			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(div2);
     			mounted = false;
-    			dispose();
+    			run_all(dispose);
     		}
     	};
 
@@ -635,12 +639,16 @@ var app = (function () {
     function instance($$self, $$props, $$invalidate) {
     	let $view;
     	validate_store(view, "view");
-    	component_subscribe($$self, view, $$value => $$invalidate(1, $view = $$value));
+    	component_subscribe($$self, view, $$value => $$invalidate(2, $view = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("Login", slots, []);
 
     	function goToMain() {
     		set_store_value(view, $view = "Main", $view);
+    	}
+
+    	function goToContent() {
+    		set_store_value(view, $view = "Content", $view);
     	}
 
     	const writable_props = [];
@@ -649,8 +657,8 @@ var app = (function () {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<Login> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$capture_state = () => ({ view, goToMain, $view });
-    	return [goToMain];
+    	$$self.$capture_state = () => ({ view, goToMain, goToContent, $view });
+    	return [goToMain, goToContent];
     }
 
     class Login extends SvelteComponentDev {
@@ -1790,7 +1798,7 @@ var app = (function () {
     			p = element("p");
     			p.textContent = "OFFERS";
     			add_location(p, file$5, 16, 12, 362);
-    			attr_dev(div, "class", "offers-component svelte-knclhu");
+    			attr_dev(div, "class", "offers-component svelte-1hi5s1i");
     			add_location(div, file$5, 15, 8, 319);
     		},
     		m: function mount(target, anchor) {
@@ -1825,7 +1833,7 @@ var app = (function () {
     			p.textContent = "OFFERS2";
     			attr_dev(p, "class", "offer-title");
     			add_location(p, file$5, 22, 12, 484);
-    			attr_dev(div, "class", "offers-component svelte-knclhu");
+    			attr_dev(div, "class", "offers-component svelte-1hi5s1i");
     			add_location(div, file$5, 21, 8, 441);
     		},
     		m: function mount(target, anchor) {
@@ -1860,7 +1868,7 @@ var app = (function () {
     			p.textContent = "OFFERS3";
     			attr_dev(p, "class", "offer-title");
     			add_location(p, file$5, 28, 12, 627);
-    			attr_dev(div, "class", "offers-component svelte-knclhu");
+    			attr_dev(div, "class", "offers-component svelte-1hi5s1i");
     			add_location(div, file$5, 27, 8, 584);
     		},
     		m: function mount(target, anchor) {
@@ -2009,7 +2017,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(swipe.$$.fragment);
-    			attr_dev(div, "class", "swipe-holder svelte-knclhu");
+    			attr_dev(div, "class", "swipe-holder svelte-1hi5s1i");
     			add_location(div, file$5, 12, 0, 237);
     		},
     		l: function claim(nodes) {
@@ -2120,13 +2128,13 @@ var app = (function () {
     			attr_dev(i, "class", "fas fa-ellipsis-h");
     			set_style(i, "margin-top", "30px");
     			add_location(i, file$6, 7, 8, 95);
-    			attr_dev(span, "class", "Menu svelte-1ds51hh");
+    			attr_dev(span, "class", "Menu svelte-rzkx9p");
     			add_location(span, file$6, 6, 4, 67);
-    			attr_dev(img, "class", "Logo svelte-1ds51hh");
+    			attr_dev(img, "class", "Logo svelte-rzkx9p");
     			if (img.src !== (img_src_value = "/img/Logo.svg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
     			add_location(img, file$6, 9, 0, 167);
-    			attr_dev(nav, "class", "svelte-1ds51hh");
+    			attr_dev(nav, "class", "svelte-rzkx9p");
     			add_location(nav, file$6, 5, 0, 57);
     		},
     		l: function claim(nodes) {
