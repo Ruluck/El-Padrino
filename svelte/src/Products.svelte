@@ -56,6 +56,9 @@ function minusCount(product) {
     justify-content: center;
     color: #212121;
     flex-direction: column;
+    margin-left: 55px;
+    border-radius: 50px;
+    background-color: #f5f5f5;
 }
 
 .content-products::-webkit-scrollbar {
@@ -67,12 +70,12 @@ function minusCount(product) {
   /*scrollbar-width: none;  /*Firefox*/
 } 
 
-.product-card {
-    /*background-color: #f5f5f5;*/
-    /*padding: 90px 35px;*/
+/*.product-card {
+    background-color: #f5f5f5;
+    padding: 90px 35px;
     border-radius: 50px;
     max-width: 200px !important;
-}
+}*/
 
 
 .count {

@@ -2267,11 +2267,11 @@ var app = (function () {
     			add_location(i1, file$6, 33, 89, 1048);
     			attr_dev(span2, "class", "minus");
     			add_location(span2, file$6, 33, 32, 991);
-    			attr_dev(div0, "class", "count svelte-1fou5cp");
+    			attr_dev(div0, "class", "count svelte-1ji1wp8");
     			add_location(div0, file$6, 30, 28, 749);
-    			attr_dev(div1, "class", "product-card svelte-1fou5cp");
+    			attr_dev(div1, "class", "product-card");
     			add_location(div1, file$6, 27, 16, 588);
-    			attr_dev(div2, "class", "section-product svelte-1fou5cp");
+    			attr_dev(div2, "class", "section-product svelte-1ji1wp8");
     			add_location(div2, file$6, 26, 8, 542);
     			this.first = div2;
     		},
@@ -2347,7 +2347,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(div, "class", "content-products svelte-1fou5cp");
+    			attr_dev(div, "class", "content-products svelte-1ji1wp8");
     			add_location(div, file$6, 24, 0, 458);
     		},
     		l: function claim(nodes) {
