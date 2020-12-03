@@ -1,5 +1,5 @@
 <script> 
-import { Swipe, SwipeItem } from "svelte-swipe";
+/*import { Swipe, SwipeItem } from "svelte-swipe";
 
     const swipeConfig = {
       autoplay: false,
@@ -8,9 +8,9 @@ import { Swipe, SwipeItem } from "svelte-swipe";
       transitionDuration: 1000,
       defaultIndex: 0,
     };
-    
+    */
     </script>
-<div class="swipe-holder">
+<!--div class="swipe-holder">
     <Swipe {...swipeConfig}>
       <SwipeItem>
         <div class="offers-component">
@@ -30,11 +30,11 @@ import { Swipe, SwipeItem } from "svelte-swipe";
         </div>
       </SwipeItem>
     </Swipe>
-</div>
+</div-->
 
 
     <style>
-     .offers-component { 
+     /*.offers-component { 
          background-color: #fca94c; 
          padding: 10.7em;
          margin: 0 auto; 
@@ -51,5 +51,5 @@ import { Swipe, SwipeItem } from "svelte-swipe";
         margin-top: -335px;
         box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.4);
     }
-
+*/
     </style>
