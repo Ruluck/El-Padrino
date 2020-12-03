@@ -12,7 +12,7 @@ import Products from "./Products.svelte";
 
 </nav>
 
-<!--Offer/-->
+<Offer/>
 
 <Products/>
 
