@@ -1,5 +1,6 @@
 <script>
 import Offer from "./Offer.svelte";
+import Products from "./Products.svelte";
 
 </script>
 
@@ -11,7 +12,10 @@ import Offer from "./Offer.svelte";
 
 </nav>
 
-<Offer/>
+<!--Offer/-->
+
+<Products/>
+
 
 <style>
     nav {
@@ -22,7 +26,7 @@ import Offer from "./Offer.svelte";
         display: flex;
         z-index: 99;
         position: relative;
-        top: -150px;
+        top: -200px;
     }
 
     .Menu {
@@ -30,7 +34,8 @@ import Offer from "./Offer.svelte";
         font-size: 30px;
         margin-left: 35px;
         position: relative;
-        top: 150px;
+        top: 185px;
+        left: 55px;
     }
 
     .Logo {
@@ -38,6 +43,7 @@ import Offer from "./Offer.svelte";
         margin: 0;
         left: 420px;
         position: relative;
+        top: 65px;
     }
     
 </style>
